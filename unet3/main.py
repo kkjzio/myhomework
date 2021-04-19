@@ -1,3 +1,7 @@
+import os
+
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
+
 from model import *
 import matplotlib.pyplot as plt
 
@@ -17,9 +21,9 @@ model = unet()
 # 如果内存小batch_size就设为1吧
 # steps_per_epoch=2为load_train返回的次数，到所标记的次数算作完成一次epoch
 # workers为最大进程数
-history = model.fit_generator(load_train(r"E:\BaiduNetdiskDownload\carvana\object.csv", 512, 512, 4), workers=1,
-                              steps_per_epoch=100, epochs=5,
-                              validation_data=load_test(r"E:\BaiduNetdiskDownload\carvana\vale.csv", 512, 512, 100)
+history = model.fit_generator(load_train(r"object.csv", 512, 512, 2), workers=1,
+                              steps_per_epoch=2, epochs=20,
+                              validation_data=load_test(r"vale.csv", 512, 512, 100)
                               )
 
 
