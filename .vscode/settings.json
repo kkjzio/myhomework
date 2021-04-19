@@ -1,4 +1,5 @@
 {
     "jupyter.jupyterServerType": "local",
-    "python.pythonPath": "D:\\anaconda3\\envs\\tf2\\python.exe"
+    "python.pythonPath": "D:\\anaconda3\\envs\\tf2\\python.exe",
+    "restructuredtext.confPath": "${workspaceFolder}\\unet\\docs"
 }
